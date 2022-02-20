@@ -1,0 +1,23 @@
+
+<form action="/news/news-search" method="POST">
+  <div class="field">
+  
+  <div class="control">
+    <input class="input"name="search" type="text" placeholder="You can type here">
+  </div>
+  <div class="control">
+    <button type="submit" class="button is-link is-warning">Search</button>
+  </div>
+</div>
+
+ 
+</form> 
+
+{{#each article}}
+
+{{>newsCard this}}
+
+{{/each}}
+
+  </div>
+

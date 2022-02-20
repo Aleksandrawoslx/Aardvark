@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>newsEater</title>
+  </head>
+  <body>
+    <div class="container nav">
+      <nav
+        class="navbar is-warning is-fixed-top"
+        role="navigation"
+        aria-label="dropdown navigation"
+      >
+        <div class="navbar-start">
+          
+          <a class="navbar-item" href="#">
+            <img src="/images/newseater.png" width="55" height="80" />
+          </a>
+          <a class="navbar-item" href="/">All</a>
+          <a class="navbar-item" href="/posts/read-posts">Postfeed</a>
+          <a class="navbar-item" href="/news">News</a>
+          <a class="navbar-item" href="/posts/create">Write</a>
+
+        </div>
+
+        <div class="navbar-end">
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Your Account
+            </a>
+
+            <div class="navbar-dropdown">
+
+              {{#if session}}
+                <a class="navbar-item" href="/profile">Profile</a>
+                <a class="navbar-item" href="/logout">Logout</a>
+              {{else}}
+                <a class="navbar-item" href="/signup">Register</a>
+                <a class="navbar-item" href="/login">Login</a>
+              {{/if}}
+              <hr class="navbar-divider" />
+
+            </div>
+          </div>
+
+        </div>
+
+      </nav>
+    </div>
+
+    <div class="container main">
+      {{{body}}}
+    </div>
+
+  </body>
+</html>

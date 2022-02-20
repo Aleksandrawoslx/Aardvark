@@ -1,0 +1,24 @@
+<h3>Update Your Information:</h3>
+
+<form action="/edit-profile" method="post">
+  <label>
+    <input
+      class="input inputs"
+      type="text"
+      name="username"
+      value="{{userInSession.username}}"
+    />
+  </label>
+
+  <label>
+    <input
+      class="input inputs"
+      type="text"
+      name="email"
+      value="{{userInSession.email}}"
+    />
+  </label>
+  <br />
+
+  <button class="button is-link is-warning" type="submit">Update</button>
+</form>

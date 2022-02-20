@@ -1,0 +1,26 @@
+<section >
+
+<section class="posts-details">
+  
+
+  {{#each posts}}
+
+  {{#if this.kind}}
+ 
+    {{>postCard this}}
+
+    {{else}}
+
+    {{>newsCard this}}
+
+  {{/if}}
+
+
+    
+  {{/each}}
+</section>
+
+<a href="/posts/read-posts">Back</a>
+
+</section>
+ 

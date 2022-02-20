@@ -1,0 +1,41 @@
+<div id="form">
+  <h5>Fill the form below to login</h5>
+
+  <form action="/login" method="POST">
+
+    <label>
+
+      <input
+        class="input"
+        type="email"
+        name="email"
+        placeholder="email"
+        required
+      />
+    </label>
+    <br />
+
+    <label>
+      <input
+        class="input"
+        type="password"
+        name="password"
+        placeholder="password"
+        required
+      />
+    </label>
+    <br />
+
+    <button class="button is-link is-warning" type="submit">Login</button>
+
+  </form>
+
+  <p>
+    Don't have an account? Register
+    <a href="/signup">here</a>.
+  </p>
+</div>
+
+{{#if errorMessage}}
+  <p class="error">{{errorMessage}}</p>
+{{/if}}
