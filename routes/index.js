@@ -8,7 +8,7 @@ router.get("/", (req, res, next) => {
   Post.find()
     .populate("author")
     .then((postsfromDb) => {
-      // console.log(postsfromDb)
+    
       mixArr = mixArr.concat(postsfromDb);
     });
 
@@ -27,7 +27,7 @@ router.get("/", (req, res, next) => {
         return a.publishedAt.localeCompare(b.publishedAt);
       });
       return mixArr.reverse();
-      // res.render("post/news-thread", { article: data.articles });
+   
     })
     .then(function (data) {
       console.log(data);
