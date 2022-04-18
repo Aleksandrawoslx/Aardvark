@@ -2,12 +2,11 @@ const router = require("express").Router();
 const NewsAPI = require("newsapi");
 
 router.get("/", (req, res) => {
-  // res.send("news");
+ 
   const newsapi = new NewsAPI("f07b973466da4070a05742e1dc7d5a3c");
   newsapi.v2
     .everything({
-      sources:
-        "bbc-news, edition.cnn.com, theverge.com/tech, cnet.com/news, technewsworld.com, techcrunch.com, euronews.com, vox.com, nbcnews.com, time.com, aljazeera.com",
+      q:"technology",
       language: "en",
       sortBy: "publishedAt",
     })
